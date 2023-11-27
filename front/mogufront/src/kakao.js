@@ -10,7 +10,7 @@ function Kakao(){
     // API 요청을 보내는 함수
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8080/api/contest/info');
+        const response = await fetch('http://211.45.167.245:8080/api/contest/info');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

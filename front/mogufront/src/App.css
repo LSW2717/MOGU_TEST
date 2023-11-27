@@ -10,7 +10,7 @@
 
 .image-container img {
   width: 100%; /* 이미지의 너비를 컨테이너의 너비에 맞춤 */
-  height: 250px; /* 세로 높이를 원하는 값으로 고정 */
+  height: 200px; /* 세로 높이를 원하는 값으로 고정 */
   object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 설정하되, 비율 유지 */
   object-position: center; /* 세로 길이가 너무 길 경우 상단 부분 유지 */
 }
@@ -74,7 +74,7 @@
 .text {
   position: fixed;
   left: 0;
-  bottom: 40%; /* 화면의 하단에 위치 */
+  bottom: 35%; /* 화면의 하단에 위치 */
   width: 100%; /* 화면 너비에 맞춤 */
   color: #000;
   text-align: center;
