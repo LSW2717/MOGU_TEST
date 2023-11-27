@@ -1,4 +1,5 @@
 package com.example.test.controller;
+import com.example.test.dto.ContestApiResponseDto;
 import com.example.test.dto.ContestResponseDto;
 import com.example.test.entity.Contest;
 import com.example.test.service.ContestService;
@@ -20,19 +21,13 @@ public class ContestController {
     private final ContestService contestService;
 
     @GetMapping("/info")
-    public ResponseEntity<List<ContestResponseDto>> getAllContests() {
+    public ResponseEntity<ContestApiResponseDto<List<ContestResponseDto>>> getAllContests() {
         List<Contest> contests = contestService.getContests();
         List<ContestResponseDto> contestDtos = contests.stream()
-                .map(contest -> new ContestResponseDto(
-                        contest.getId(),
-                        contest.getName(),
-                        contest.getCategory(),
-                        contest.getEndDate(),
-                        contest.getUrl(),
-                        contest.getImgUrl())
-                )
+                .map(contest -> new ContestResponseDto(contest.getId(), contest.getName(), contest.getCategory(),contest.getEndDate(), contest.getUrl(), contest.getImgUrl()))
                 .collect(Collectors.toList());
-
-        return ResponseEntity.ok(contestDtos);
+        ContestApiResponseDto<List<ContestResponseDto>> response = new ContestApiResponseDto<>();
+        response.setData(contestDtos);
+        return ResponseEntity.ok(response);
     }
 }
