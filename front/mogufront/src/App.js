@@ -15,7 +15,7 @@ function App() {
               <img src={MyImage} alt="image" />
             </div>
             <div className="text">
-              <span>인하대학교 IVC 소속 스타트엄 팀 <b>모구</b>입니다</span>
+              <span>인하대학교 IVC 소속 스타트업 팀 <b>모구</b>입니다</span>
               <p><br></br>프로젝트를 함께 진행할 <span className="highlight-yellow">개발자</span> / <span className="highlight-red">디자이너</span>를
               <br></br><b>모구</b>와 함께 모집하고 구해보세요!</p>
               <Link to="/kakao" className="link-class"><span><b><br></br>시작하기 {'>'}</b></span></Link>
