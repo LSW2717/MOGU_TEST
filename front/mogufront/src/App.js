@@ -2,7 +2,7 @@ import MyImage from './images/building.jpg';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Kakao from './kakao.js';
+import Kakao from './select.js';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
               <span>인하대학교 IVC 소속 스타트업 팀 <b>모구</b>입니다</span>
               <p><br></br>프로젝트를 함께 진행할 <span className="highlight-yellow">개발자</span> / <span className="highlight-red">디자이너</span>를
               <br></br><b>모구</b>와 함께 모집하고 구해보세요!</p>
-              <Link to="/kakao" className="link-class"><span><b><br></br>시작하기 {'>'}</b></span></Link>
+              <Link to="/select" className="link-class"><span><b><br></br>시작하기 {'>'}</b></span></Link>
               
             </div>
             <div class="fixed-footer">
@@ -26,7 +26,7 @@ function App() {
               </div>
           </div> 
         } /> 
-        <Route path="/kakao" element={<Kakao />} />
+        <Route path="/select" element={<Kakao />} />
       </Routes>
     </>
   );
